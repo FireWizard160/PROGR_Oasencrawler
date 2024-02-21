@@ -1,4 +1,4 @@
-# Install script for directory: C:/FH/SS24/PROGR/Oasencrawler
+# Install script for directory: C:/FH/SS24/PROGR/PROGR_Oasencrawler
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/FH/SS24/PROGR/Oasencrawler/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/FH/SS24/PROGR/PROGR_Oasencrawler/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
