@@ -55,8 +55,20 @@ build CMakeFiles/Oasencrawler.dir/main.cpp.obj: CXX_COMPILER__Oasencrawler_unsca
   OBJECT_DIR = CMakeFiles\Oasencrawler.dir
   OBJECT_FILE_DIR = CMakeFiles\Oasencrawler.dir
 
-build CMakeFiles/Oasencrawler.dir/field.cpp.obj: CXX_COMPILER__Oasencrawler_unscanned_Debug C$:/FH/SS24/PROGR/PROGR_Oasencrawler/field.cpp || cmake_object_order_depends_target_Oasencrawler
-  DEP_FILE = CMakeFiles\Oasencrawler.dir\field.cpp.obj.d
+build CMakeFiles/Oasencrawler.dir/Field.cpp.obj: CXX_COMPILER__Oasencrawler_unscanned_Debug C$:/FH/SS24/PROGR/PROGR_Oasencrawler/Field.cpp || cmake_object_order_depends_target_Oasencrawler
+  DEP_FILE = CMakeFiles\Oasencrawler.dir\Field.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Oasencrawler.dir
+  OBJECT_FILE_DIR = CMakeFiles\Oasencrawler.dir
+
+build CMakeFiles/Oasencrawler.dir/Board.cpp.obj: CXX_COMPILER__Oasencrawler_unscanned_Debug C$:/FH/SS24/PROGR/PROGR_Oasencrawler/Board.cpp || cmake_object_order_depends_target_Oasencrawler
+  DEP_FILE = CMakeFiles\Oasencrawler.dir\Board.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Oasencrawler.dir
+  OBJECT_FILE_DIR = CMakeFiles\Oasencrawler.dir
+
+build CMakeFiles/Oasencrawler.dir/Player.cpp.obj: CXX_COMPILER__Oasencrawler_unscanned_Debug C$:/FH/SS24/PROGR/PROGR_Oasencrawler/Player.cpp || cmake_object_order_depends_target_Oasencrawler
+  DEP_FILE = CMakeFiles\Oasencrawler.dir\Player.cpp.obj.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Oasencrawler.dir
   OBJECT_FILE_DIR = CMakeFiles\Oasencrawler.dir
@@ -69,7 +81,7 @@ build CMakeFiles/Oasencrawler.dir/field.cpp.obj: CXX_COMPILER__Oasencrawler_unsc
 #############################################
 # Link the executable Oasencrawler.exe
 
-build Oasencrawler.exe: CXX_EXECUTABLE_LINKER__Oasencrawler_Debug CMakeFiles/Oasencrawler.dir/main.cpp.obj CMakeFiles/Oasencrawler.dir/field.cpp.obj
+build Oasencrawler.exe: CXX_EXECUTABLE_LINKER__Oasencrawler_Debug CMakeFiles/Oasencrawler.dir/main.cpp.obj CMakeFiles/Oasencrawler.dir/Field.cpp.obj CMakeFiles/Oasencrawler.dir/Board.cpp.obj CMakeFiles/Oasencrawler.dir/Player.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Oasencrawler.dir

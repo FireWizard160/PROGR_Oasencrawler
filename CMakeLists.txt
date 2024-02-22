@@ -4,5 +4,9 @@ project(Oasencrawler)
 set(CMAKE_CXX_STANDARD 23)
 
 add_executable(Oasencrawler main.cpp
-        field.cpp
-        field.h)
+        Field.cpp
+        Field.h
+        Board.cpp
+        Board.h
+        Player.cpp
+        Player.h)
