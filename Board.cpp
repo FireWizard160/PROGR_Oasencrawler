@@ -22,19 +22,19 @@ void Board::printBoard(){
             std::cout << "| ";
 
             switch (board[i][j].fieldType) {
-                case 0:{
+                case empty:{
                     std::cout << "e";
                     break;
                 }
-                case 1:{
+                case danger:{
                     std::cout << "d";
                     break;
                 }
-                case 2:{
+                case relict:{
                     std::cout << "r";
                     break;
                 }
-                case 3:{
+                case spring:{
                     std::cout << "s";
                     break;
                 }
