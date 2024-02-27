@@ -16,7 +16,7 @@ public:
 
     FieldType fieldType;
 
-    FieldType createFieldType();
+    static FieldType createFieldType();
 
 };
 

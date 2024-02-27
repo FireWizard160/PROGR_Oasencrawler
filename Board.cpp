@@ -4,11 +4,24 @@
 
 #include <iostream>
 #include "Board.h"
+#include "Field.h"
+#include "Player.h"
+
+void Board::createBoard(){
+
+    for (int i = 0; i < 5; ++i) {
+        for (int j = 0; j < 5; ++j) {
+            board[i][j].fieldType = Field::createFieldType();
+        }
+
+    }
+
+}
 
 
-//void Board::createBoard(){}
 
-void Board::printBoard(){
+void Board::printBoard(Vector playerPosition){
+
 
 
     for (int j = 0; j < 5; ++j) {
@@ -20,6 +33,11 @@ void Board::printBoard(){
         for (int j = 0; j < 5; ++j) {
 
             std::cout << "| ";
+
+            if(i == playerPosition.x && j == playerPosition.y){
+                std::cout << "P |";
+                continue;
+            }
 
             switch (board[i][j].fieldType) {
                 case empty:{
@@ -56,5 +74,7 @@ void Board::printBoard(){
 }
 
 Board::Board() {
-
+    createBoard();
 }
+
+

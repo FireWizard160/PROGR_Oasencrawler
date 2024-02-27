@@ -3,3 +3,13 @@
 //
 
 #include "Player.h"
+
+
+Player::Player() {
+
+
+}
+
+Vector Player::getPlayerPosition() {
+    return position;
+}

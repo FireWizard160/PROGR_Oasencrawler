@@ -5,16 +5,15 @@
 #ifndef OASENCRAWLER_BOARD_H
 #define OASENCRAWLER_BOARD_H
 #include "Field.h"
-
+#include "Player.h"
 
 
 class Board {
     public:
         Board();
         Field board[5][5];
-       // createBoard();
-        void printBoard();
-
+       void createBoard();
+        void printBoard(Vector playerPosition);
 };
 
 

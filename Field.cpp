@@ -30,5 +30,5 @@ FieldType Field::createFieldType() {
 
 Field::Field() {
 
-    fieldType = createFieldType();
+    
 }
