@@ -34,7 +34,7 @@ void Board::printBoard(Vector playerPosition){
 
             std::cout << "| ";
 
-            if(i == playerPosition.x && j == playerPosition.y){
+            if(i == playerPosition.y && j == playerPosition.x){
                 std::cout << "P |";
                 continue;
             }

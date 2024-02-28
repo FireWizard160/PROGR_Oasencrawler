@@ -1,7 +1,10 @@
 
 
+
+
 #include <ctime>
 #include <cstdlib>
+#include <iostream>
 #include "Board.h"
 #include "Player.h"
 
@@ -10,8 +13,21 @@ int main(){
     Board board = Board();
     Player player = Player();
 
+    char userInput;
+    while(1){
 
-    board.printBoard(player.getPlayerPosition());
+        std::cin >> userInput;
+
+        if (userInput == 'x'){
+            return 0;
+        }
+
+        player.setPlayerPosition(userInput);
+        board.printBoard(player.getPlayerPosition());
+    }
+
+
+
 
 
 
