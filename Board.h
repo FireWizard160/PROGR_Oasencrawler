@@ -15,7 +15,7 @@ class Board {
        void createBoard();
         void printBoard(Vector playerPosition);
         int countRelics();
-        bool checkValidRelics();
+        bool checkValidRelics(Board);
         Board checkValidBoard(Board);
 
 };

@@ -92,18 +92,19 @@ int Board::countRelics(){
     return countRelics;
 }
 
-bool Board::checkValidRelics() {
+bool Board::checkValidRelics(Board board) {
 
     if (countRelics() == 0){
         return false;
     } else {
         return true;
     }
+
 }
 
 Board Board::checkValidBoard(Board board){
     while (1){
-        if (checkValidRelics()){
+        if (!checkValidRelics(board)){
             board = Board();
         } else {
             break;
