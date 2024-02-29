@@ -63,3 +63,12 @@ bool Player::checkValidMove(int coordinate) {
     }
     return true;
 }
+
+
+void Player::printPlayerStats() {
+    std::cout << "Collected Relics: " << collectedRelics << std::endl;
+    std::cout << "Health: " << health << std::endl;
+
+
+
+}

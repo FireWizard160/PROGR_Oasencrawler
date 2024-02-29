@@ -25,7 +25,9 @@ class Player {
         Vector getPlayerPosition();
         Vector setPlayerPosition(char userInput);
         bool checkValidMove(int coordinate);
+        void printPlayerStats();
         int health = 5;
+        int collectedRelics = 0;
 
 
 

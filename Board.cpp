@@ -69,8 +69,49 @@ void Board::printBoard(Vector playerPosition){
         std::cout<< "\n";
     }
 
+    std::cout << "Remaining Relics: " << countRelics() << std::endl;
+
+// print Playerstats
+
+}
+
+int Board::countRelics(){
+
+    int countRelics = 0;
+
+    for (int i = 0; i < 5; ++i) {
+        for (int j = 0; j < 5; ++j) {
+
+         if (board[i][j].fieldType == relict){
+             countRelics++;
+         }
 
 
+        }
+    }
+    return countRelics;
+}
+
+bool Board::checkValidRelics() {
+
+    if (countRelics() == 0){
+        return false;
+    } else {
+        return true;
+    }
+}
+
+Board Board::checkValidBoard(Board board){
+    while (1){
+        if (checkValidRelics()){
+            board = Board();
+        } else {
+            break;
+        }
+    }
+
+
+    return board;
 }
 
 Board::Board() {
