@@ -7,12 +7,13 @@
 #include <iostream>
 #include "Board.h"
 #include "Player.h"
+#include "Field.h"
 
 int main(){
     srand(static_cast<unsigned>(time(nullptr)));
     Board board = Board();
     board = board.checkValidBoard(board);
-    // Makes sure that every Board contains at least 1 relic
+
 
 
     Player player = Player();
@@ -30,6 +31,8 @@ int main(){
         }
 
         player.setPlayerPosition(userInput);
+
+        board.getCurrentFieldType(player);
         board.printBoard(player.getPlayerPosition());
         player.printPlayerStats();
 

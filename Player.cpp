@@ -15,6 +15,14 @@ Vector Player::getPlayerPosition() {
     return position;
 }
 
+int Player::getPlayerPositionX(){
+    return position.x;
+}
+
+int Player::getPlayerPositionY(){
+    return position.y;
+}
+
 Vector Player::setPlayerPosition(char userInput) {
     switch (userInput) {
         case 'w':
@@ -69,6 +77,16 @@ void Player::printPlayerStats() {
     std::cout << "Collected Relics: " << collectedRelics << std::endl;
     std::cout << "Health: " << health << std::endl;
 
+}
 
+int Player::getPlayerHealth(){
+    return health;
+}
 
+int Player::getPlayerCollectedRelics(){
+    return collectedRelics;
+}
+
+int Player::setPlayerCollectedRelics() {
+    collectedRelics++;
 }

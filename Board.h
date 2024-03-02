@@ -12,11 +12,12 @@ class Board {
     public:
         Board();
         Field board[5][5];
-       void createBoard();
+        void createBoard();
         void printBoard(Vector playerPosition);
         int countRelics();
         bool checkValidRelics(Board);
         Board checkValidBoard(Board);
+        FieldType getCurrentFieldType(Player);
 
 };
 

@@ -32,11 +32,13 @@ void Board::printBoard(Vector playerPosition){
     for (int i = 0; i < 5; ++i) {
         for (int j = 0; j < 5; ++j) {
 
-            std::cout << "| ";
+            std::cout << "|";
 
             if(i == playerPosition.y && j == playerPosition.x){
-                std::cout << "P |";
-                continue;
+                std::cout << "(";
+
+            } else {
+                std::cout << " ";
             }
 
             switch (board[i][j].fieldType) {
@@ -58,8 +60,15 @@ void Board::printBoard(Vector playerPosition){
                 }
 
             }
-            
-            std::cout << " |";
+
+            if(i == playerPosition.y && j == playerPosition.x){
+                std::cout << ")|";
+
+            } else {
+                std::cout << " |";
+            }
+
+
         }
         std::cout << "\n";
 
@@ -113,6 +122,10 @@ Board Board::checkValidBoard(Board board){
 
 
     return board;
+}
+
+FieldType Board::getCurrentFieldType(Player player){
+    return board[player.getPlayerPositionX()][player.getPlayerPositionY()].fieldType;
 }
 
 Board::Board() {
