@@ -125,7 +125,7 @@ Board Board::checkValidBoard(Board board){
 }
 
 FieldType Board::getCurrentFieldType(Player player){
-    return board[player.getPlayerPositionX()][player.getPlayerPositionY()].fieldType;
+    return board[player.getPlayerPositionY()][player.getPlayerPositionX()].fieldType;
 }
 
 Board::Board() {

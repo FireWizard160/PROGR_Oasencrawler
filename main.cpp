@@ -17,11 +17,12 @@ int main(){
 
 
     Player player = Player();
-
+    board.board[player.getPlayerPositionY()][player.getPlayerPositionX()].fieldType = empty;
     board.printBoard(player.getPlayerPosition());
     player.printPlayerStats();
 
     char userInput;
+
     while(1){
 
         std::cin >> userInput;
@@ -32,7 +33,31 @@ int main(){
 
         player.setPlayerPosition(userInput);
 
-        board.getCurrentFieldType(player);
+        switch (board.getCurrentFieldType(player)) {
+            case empty:{
+                break;
+            }
+            case danger:{
+                int parameter = rand() % 100;
+
+                if(parameter <= 20){
+                    player.health--;
+                }
+                break;
+            }
+            case relict:{
+                board.board[player.getPlayerPositionY()][player.getPlayerPositionX()].fieldType = empty;
+                player.setPlayerCollectedRelics();
+                break;
+            }
+            case spring:{
+                player.health++;
+                break;
+            }
+
+        }
+
+
         board.printBoard(player.getPlayerPosition());
         player.printPlayerStats();
 

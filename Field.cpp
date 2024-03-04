@@ -26,49 +26,10 @@ FieldType Field::createFieldType() {
     }
 }
 
-
-void Field::fieldActions(Field board[5][5], Player player){
-    switch (board[player.getPlayerPositionX()][player.getPlayerPositionY()].fieldType) {
-
-        case empty:{
-            break;
-        }
-        case danger:{
-            executeDanger();
-            break;
-        }
-        case relict:{
-            executeRelic();
-            break;
-        }
-        case spring:{
-            executeRelic();
-            break;
-        }
-
-    }
-
+Field::Field() {
+    createFieldType();
 }
 
-void Field::executeRelic(Player player,Field board[5][5]) {
-    board[player.getPlayerPositionX()][player.getPlayerPositionY()].fieldType = empty;
-    player.setPlayerCollectedRelics();
 
 
 
-
-
-
-}
-
-void Field::executeDanger(Player player) {
-    int parameter = rand() % 100;
-
-    if(parameter <= 20){
-        player.health--;
-    }
-}
-
-void Field::executeSpring(Player player) {
-    player.health++;
-}
