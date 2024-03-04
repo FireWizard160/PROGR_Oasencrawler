@@ -87,6 +87,6 @@ int Player::getPlayerCollectedRelics(){
     return collectedRelics;
 }
 
-int Player::setPlayerCollectedRelics() {
+void Player::setPlayerCollectedRelics() {
     collectedRelics++;
 }

@@ -73,6 +73,18 @@ build CMakeFiles/Oasencrawler.dir/Player.cpp.obj: CXX_COMPILER__Oasencrawler_uns
   OBJECT_DIR = CMakeFiles\Oasencrawler.dir
   OBJECT_FILE_DIR = CMakeFiles\Oasencrawler.dir
 
+build CMakeFiles/Oasencrawler.dir/Enemy.cpp.obj: CXX_COMPILER__Oasencrawler_unscanned_Debug C$:/FH/SS24/PROGR/PROGR_Oasencrawler/Enemy.cpp || cmake_object_order_depends_target_Oasencrawler
+  DEP_FILE = CMakeFiles\Oasencrawler.dir\Enemy.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Oasencrawler.dir
+  OBJECT_FILE_DIR = CMakeFiles\Oasencrawler.dir
+
+build CMakeFiles/Oasencrawler.dir/Entity.cpp.obj: CXX_COMPILER__Oasencrawler_unscanned_Debug C$:/FH/SS24/PROGR/PROGR_Oasencrawler/Entity.cpp || cmake_object_order_depends_target_Oasencrawler
+  DEP_FILE = CMakeFiles\Oasencrawler.dir\Entity.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Oasencrawler.dir
+  OBJECT_FILE_DIR = CMakeFiles\Oasencrawler.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Oasencrawler
@@ -81,7 +93,7 @@ build CMakeFiles/Oasencrawler.dir/Player.cpp.obj: CXX_COMPILER__Oasencrawler_uns
 #############################################
 # Link the executable Oasencrawler.exe
 
-build Oasencrawler.exe: CXX_EXECUTABLE_LINKER__Oasencrawler_Debug CMakeFiles/Oasencrawler.dir/main.cpp.obj CMakeFiles/Oasencrawler.dir/Field.cpp.obj CMakeFiles/Oasencrawler.dir/Board.cpp.obj CMakeFiles/Oasencrawler.dir/Player.cpp.obj
+build Oasencrawler.exe: CXX_EXECUTABLE_LINKER__Oasencrawler_Debug CMakeFiles/Oasencrawler.dir/main.cpp.obj CMakeFiles/Oasencrawler.dir/Field.cpp.obj CMakeFiles/Oasencrawler.dir/Board.cpp.obj CMakeFiles/Oasencrawler.dir/Player.cpp.obj CMakeFiles/Oasencrawler.dir/Enemy.cpp.obj CMakeFiles/Oasencrawler.dir/Entity.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Oasencrawler.dir

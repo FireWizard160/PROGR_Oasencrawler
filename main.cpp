@@ -13,7 +13,7 @@ int main(){
     srand(static_cast<unsigned>(time(nullptr)));
     Board board = Board();
     board = board.checkValidBoard(board);
-
+    int relics = board.countRelics();
 
 
     Player player = Player();
@@ -61,6 +61,14 @@ int main(){
         board.printBoard(player.getPlayerPosition());
         player.printPlayerStats();
 
+        if(board.countRelics() == 0){
+            std::cout  << "All Relics Found! YOU WIN!!" << std::endl;
+            return 0;
+        }
+
+        if(player.health == 0){
+            std::cout  << "All Lifes lost! YOU LOSE!!" << std::endl;
+        }
     }
 
 

@@ -5,6 +5,8 @@
 #ifndef OASENCRAWLER_PLAYER_H
 #define OASENCRAWLER_PLAYER_H
 
+#include "Entity.h"
+
 struct Vector {
 
     int x = 0;
@@ -12,7 +14,7 @@ struct Vector {
 
 }typedef Vector;
 
-class Player {
+class Player: public Entity{
 
     private:
         struct Vector position;
@@ -29,7 +31,7 @@ class Player {
         int getPlayerHealth();
         int getPlayerCollectedRelics();
         int health = 5;
-        int setPlayerCollectedRelics();
+        void setPlayerCollectedRelics();
         int collectedRelics = 0;
         int getPlayerPositionX();
         int getPlayerPositionY();

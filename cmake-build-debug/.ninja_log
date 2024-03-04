@@ -1,9 +1,13 @@
 # ninja log v5
-2	461	7309209126074559	CMakeFiles/Oasencrawler.dir/main.cpp.obj	6ab054c180fc203d
-522	596	7309186114887332	Oasencrawler.exe	9ce074a42cce86ea
-7	471	7309209126169640	CMakeFiles/Oasencrawler.dir/Board.cpp.obj	c8eb01454327180e
-6	637	7309181995769453	CMakeFiles/Oasencrawler.dir/Field.cpp.obj	16d4684e87b66bcd
-10	504	7309208374556578	CMakeFiles/Oasencrawler.dir/Player.cpp.obj	2550ee324830dd53
-3	515	7310960399631752	CMakeFiles/Oasencrawler.dir/main.cpp.obj	6ab054c180fc203d
-12	551	7310960399988747	CMakeFiles/Oasencrawler.dir/Player.cpp.obj	2550ee324830dd53
-6	551	7310960399999551	CMakeFiles/Oasencrawler.dir/Board.cpp.obj	c8eb01454327180e
+3	460	7312759512567411	CMakeFiles/Oasencrawler.dir/main.cpp.obj	6ab054c180fc203d
+460	530	7312759513238651	Oasencrawler.exe	9ce074a42cce86ea
+9	560	7312755643228668	CMakeFiles/Oasencrawler.dir/Board.cpp.obj	c8eb01454327180e
+6	555	7312755643163677	CMakeFiles/Oasencrawler.dir/Field.cpp.obj	16d4684e87b66bcd
+12	561	7312755643218696	CMakeFiles/Oasencrawler.dir/Player.cpp.obj	2550ee324830dd53
+18	82	7312769096917687	CMakeFiles/Oasencrawler.dir/Enemy.cpp.obj	a2f8da429449c283
+12	82	7312769096907710	CMakeFiles/Oasencrawler.dir/Entity.cpp.obj	c1f38eb11d691314
+6	580	7312769101905511	CMakeFiles/Oasencrawler.dir/Field.cpp.obj	16d4684e87b66bcd
+15	581	7312769101915486	CMakeFiles/Oasencrawler.dir/Player.cpp.obj	2550ee324830dd53
+2	600	7312769102130567	CMakeFiles/Oasencrawler.dir/main.cpp.obj	6ab054c180fc203d
+9	603	7312769102160522	CMakeFiles/Oasencrawler.dir/Board.cpp.obj	c8eb01454327180e
+603	684	7312769102940503	Oasencrawler.exe	d0d03d4015e90e11

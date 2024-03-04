@@ -9,4 +9,8 @@ add_executable(Oasencrawler main.cpp
         Board.cpp
         Board.h
         Player.cpp
-        Player.h)
+        Player.h
+        Enemy.cpp
+        Enemy.h
+        Entity.cpp
+        Entity.h)

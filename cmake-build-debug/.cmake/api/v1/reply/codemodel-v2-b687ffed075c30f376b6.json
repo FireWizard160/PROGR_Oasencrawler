@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Oasencrawler::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Oasencrawler-Debug-064da259cad39978b5b0.json",
+					"jsonFile" : "target-Oasencrawler-Debug-8e97831fbad1b00389f3.json",
 					"name" : "Oasencrawler",
 					"projectIndex" : 0
 				}
@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/FH/SS24/PROGR/Oasencrawler/PROGR_Oasencrawler/cmake-build-debug",
-		"source" : "D:/FH/SS24/PROGR/Oasencrawler/PROGR_Oasencrawler"
+		"build" : "C:/FH/SS24/PROGR/PROGR_Oasencrawler/cmake-build-debug",
+		"source" : "C:/FH/SS24/PROGR/PROGR_Oasencrawler"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 5
+		"minor" : 6
 	}
 }
