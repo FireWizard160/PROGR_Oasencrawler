@@ -8,17 +8,22 @@
 #include "Board.h"
 #include "Player.h"
 #include "Field.h"
+#include "Enemy.h"
+#include "Entity.h"
 
 int main(){
     srand(static_cast<unsigned>(time(nullptr)));
     Board board = Board();
-    board = board.checkValidBoard(board);
+    Enemy enemy = Enemy();
+
     int relics = board.countRelics();
 
 
     Player player = Player();
     board.board[player.getPlayerPositionY()][player.getPlayerPositionX()].fieldType = empty;
-    board.printBoard(player.getPlayerPosition());
+    board.ValidateBoard();
+
+    board.printBoard(player.getPlayerPosition(),enemy.getEnemyPosition());
     player.printPlayerStats();
 
     char userInput;
@@ -57,8 +62,8 @@ int main(){
 
         }
 
-
-        board.printBoard(player.getPlayerPosition());
+        system("cls");
+        board.printBoard(player.getPlayerPosition(),enemy.getEnemyPosition());
         player.printPlayerStats();
 
         if(board.countRelics() == 0){

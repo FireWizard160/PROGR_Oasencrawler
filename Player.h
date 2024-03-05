@@ -7,17 +7,12 @@
 
 #include "Entity.h"
 
-struct Vector {
 
-    int x = 0;
-    int y = 0;
-
-}typedef Vector;
 
 class Player: public Entity{
 
     private:
-        struct Vector position;
+
 
 
     public:
@@ -26,7 +21,6 @@ class Player: public Entity{
 
         Vector getPlayerPosition();
         Vector setPlayerPosition(char userInput);
-        bool checkValidMove(int coordinate);
         void printPlayerStats();
         int getPlayerHealth();
         int getPlayerCollectedRelics();
@@ -37,6 +31,7 @@ class Player: public Entity{
         int getPlayerPositionY();
 
 
+    
 
 
 

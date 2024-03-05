@@ -3,3 +3,7 @@
 //
 
 #include "Enemy.h"
+Enemy::Enemy() {
+    position = Vector{5, 5};
+}
+

@@ -13,10 +13,10 @@ class Board {
         Board();
         Field board[5][5];
         void createBoard();
-        void printBoard(Vector playerPosition);
+        void printBoard(Vector playerPosition, Vector enemyPosition);
         int countRelics();
-        bool checkValidRelics(Board);
-        Board checkValidBoard(Board);
+        bool checkValidRelics();
+        void ValidateBoard();
         FieldType getCurrentFieldType(Player);
 
 };

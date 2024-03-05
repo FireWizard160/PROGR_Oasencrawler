@@ -7,20 +7,25 @@
 #include "Field.h"
 #include "Player.h"
 
+//todo validiern beim erstellen
+//todo startposition beim board constructor beachten
 void Board::createBoard(){
-
     for (int i = 0; i < 5; ++i) {
         for (int j = 0; j < 5; ++j) {
+            //if startposition = empty field
             board[i][j].fieldType = Field::createFieldType();
+            //count relics
         }
-
     }
 
+    //validate board
+    //relic count == 0
+    // rand 0 - board size (xy) = relic nicht starposition
 }
 
 
 
-void Board::printBoard(Vector playerPosition){
+void Board::printBoard(Vector playerPosition, Vector enemyPosition){
 
 
 
@@ -37,6 +42,8 @@ void Board::printBoard(Vector playerPosition){
             if(i == playerPosition.y && j == playerPosition.x){
                 std::cout << "(";
 
+            } else if(i == enemyPosition.y && j == enemyPosition.x) {
+                std::cout << "[";
             } else {
                 std::cout << " ";
             }
@@ -64,6 +71,8 @@ void Board::printBoard(Vector playerPosition){
             if(i == playerPosition.y && j == playerPosition.x){
                 std::cout << ")|";
 
+            }  else if(i == enemyPosition.y && j == enemyPosition.x) {
+                std::cout << "]|";
             } else {
                 std::cout << " |";
             }
@@ -101,7 +110,7 @@ int Board::countRelics(){
     return countRelics;
 }
 
-bool Board::checkValidRelics(Board board) {
+bool Board::checkValidRelics() {
 
     if (countRelics() == 0){
         return false;
@@ -111,17 +120,10 @@ bool Board::checkValidRelics(Board board) {
 
 }
 
-Board Board::checkValidBoard(Board board){
-    while (1){
-        if (!checkValidRelics(board)){
-            board = Board();
-        } else {
-            break;
-        }
+void Board::ValidateBoard(){
+    while (!checkValidRelics()){
+            createBoard();
     }
-
-
-    return board;
 }
 
 FieldType Board::getCurrentFieldType(Player player){

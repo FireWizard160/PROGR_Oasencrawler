@@ -23,15 +23,10 @@ int Player::getPlayerPositionY(){
     return position.y;
 }
 
-Vector Player::setPlayerPosition(char userInput) {
+Vector Player::setPosition(char userInput) {
     switch (userInput) {
         case 'w':
-            if (checkValidMove(position.y - 1)){
-                position.y--;
-            } else {
-                std::cout << "Invalid Move" << std::endl;
-            }
-
+            Move(Vector(0, -1));
             break;
 
         case 's':
@@ -65,12 +60,7 @@ Vector Player::setPlayerPosition(char userInput) {
 }
 
 
-bool Player::checkValidMove(int coordinate) {
-    if (coordinate > 4 || coordinate < 0){
-        return false;
-    }
-    return true;
-}
+
 
 
 void Player::printPlayerStats() {
