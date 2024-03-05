@@ -20,18 +20,19 @@ class Player: public Entity{
 
 
         Vector getPlayerPosition();
-        Vector setPlayerPosition(char userInput);
+
+        void inputHandler();
         void printPlayerStats();
         int getPlayerHealth();
         int getPlayerCollectedRelics();
         int health = 5;
         void setPlayerCollectedRelics();
         int collectedRelics = 0;
-        int getPlayerPositionX();
-        int getPlayerPositionY();
+        int level = 1;
+        void setDefaultPlayerPostion();
 
 
-    
+
 
 
 

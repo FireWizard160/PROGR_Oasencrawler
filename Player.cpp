@@ -5,65 +5,52 @@
 #include <iostream>
 #include "Player.h"
 
-
+extern int level;
 Player::Player() {
 
 
 }
 
-Vector Player::getPlayerPosition() {
-    return position;
-}
 
-int Player::getPlayerPositionX(){
-    return position.x;
-}
 
-int Player::getPlayerPositionY(){
-    return position.y;
-}
+void Player::inputHandler() {
+    char userInput;
 
-Vector Player::setPosition(char userInput) {
+    std::cin >> userInput;
+
     switch (userInput) {
         case 'w':
             Move(Vector(0, -1));
             break;
 
         case 's':
-            if (checkValidMove(position.y + 1)){
-                position.y++;
-            } else {
-                std::cout << "Invalid Move" << std::endl;
-            }
+            Move(Vector(0,1));
             break;
 
         case 'a':
-            if (checkValidMove(position.x - 1)){
-                position.x--;
-            } else {
-                std::cout << "Invalid Move" << std::endl;
-            }
+            Move(Vector(-1,0));
             break;
 
         case 'd':
-            if (checkValidMove(position.x + 1)){
-                position.x++;
-            } else {
-                std::cout << "Invalid Move" << std::endl;
-            }
+            Move(Vector(1,0));
             break;
 
-            default: std::cout << "Invalid Button" << std::endl;
+
+
+        default: std::cout << "Invalid Button: Press WASD to Move" << std::endl;
             break;
     }
-    return position;
 }
 
 
 
-
+void Player::setDefaultPlayerPostion() {
+    position.x = 0;
+    position.y = 0;
+}
 
 void Player::printPlayerStats() {
+
     std::cout << "Collected Relics: " << collectedRelics << std::endl;
     std::cout << "Health: " << health << std::endl;
 

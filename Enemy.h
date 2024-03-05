@@ -11,6 +11,7 @@
 class Enemy : public Entity{
     public:
         Enemy();
+        void enemyMove();
 };
 
 

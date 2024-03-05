@@ -10,6 +10,7 @@ enum FieldType {
     danger ,
     relict ,
     spring ,
+    item,
 
 };
 
@@ -20,6 +21,7 @@ public:
     FieldType fieldType;
 
     static FieldType createFieldType();
+
 
 
 };

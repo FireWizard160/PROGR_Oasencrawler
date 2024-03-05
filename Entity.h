@@ -23,7 +23,7 @@ protected:
     public:
     Entity() = default;
     bool checkValidMove(Vector positon);
-
+    Vector getPosition();
     bool Move(Vector direction);
 };
 

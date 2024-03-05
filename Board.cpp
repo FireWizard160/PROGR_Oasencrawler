@@ -39,9 +39,10 @@ void Board::printBoard(Vector playerPosition, Vector enemyPosition){
 
             std::cout << "|";
 
+
+
             if(i == playerPosition.y && j == playerPosition.x){
                 std::cout << "(";
-
             } else if(i == enemyPosition.y && j == enemyPosition.x) {
                 std::cout << "[";
             } else {
@@ -63,6 +64,10 @@ void Board::printBoard(Vector playerPosition, Vector enemyPosition){
                 }
                 case spring:{
                     std::cout << "s";
+                    break;
+                }
+                case item:{
+                    std::cout << "?";
                     break;
                 }
 
@@ -124,10 +129,12 @@ void Board::ValidateBoard(){
     while (!checkValidRelics()){
             createBoard();
     }
+
+
 }
 
 FieldType Board::getCurrentFieldType(Player player){
-    return board[player.getPlayerPositionY()][player.getPlayerPositionX()].fieldType;
+    return board[player.getPosition().y][player.getPosition().x].fieldType;
 }
 
 Board::Board() {

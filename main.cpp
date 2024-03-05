@@ -1,7 +1,7 @@
 
 
 
-
+#include <stdlib.h>
 #include <ctime>
 #include <cstdlib>
 #include <iostream>
@@ -11,75 +11,82 @@
 #include "Enemy.h"
 #include "Entity.h"
 
+int level = 1;
+
 int main(){
-    srand(static_cast<unsigned>(time(nullptr)));
-    Board board = Board();
-    Enemy enemy = Enemy();
-
-    int relics = board.countRelics();
-
-
     Player player = Player();
-    board.board[player.getPlayerPositionY()][player.getPlayerPositionX()].fieldType = empty;
-    board.ValidateBoard();
+    srand(static_cast<unsigned>(time(nullptr)));
 
-    board.printBoard(player.getPlayerPosition(),enemy.getEnemyPosition());
-    player.printPlayerStats();
+    while (1) {
 
-    char userInput;
 
-    while(1){
+        Board board = Board();
+        Enemy enemy = Enemy();
 
-        std::cin >> userInput;
 
-        if (userInput == 'x'){
-            return 0;
-        }
+        board.board[player.getPosition().y][player.getPosition().x].fieldType = empty;
+        board.ValidateBoard();
 
-        player.setPlayerPosition(userInput);
-
-        switch (board.getCurrentFieldType(player)) {
-            case empty:{
-                break;
-            }
-            case danger:{
-                int parameter = rand() % 100;
-
-                if(parameter <= 20){
-                    player.health--;
-                }
-                break;
-            }
-            case relict:{
-                board.board[player.getPlayerPositionY()][player.getPlayerPositionX()].fieldType = empty;
-                player.setPlayerCollectedRelics();
-                break;
-            }
-            case spring:{
-                player.health++;
-                break;
-            }
-
-        }
-
-        system("cls");
-        board.printBoard(player.getPlayerPosition(),enemy.getEnemyPosition());
+        std::cout << "Level: " << level << std::endl;
+        board.printBoard(player.getPosition(), enemy.getPosition());
         player.printPlayerStats();
 
-        if(board.countRelics() == 0){
-            std::cout  << "All Relics Found! YOU WIN!!" << std::endl;
-            return 0;
+
+        while (1) {
+
+
+            player.inputHandler();
+
+            switch (board.getCurrentFieldType(player)) {
+                case empty: {
+                    break;
+                }
+                case danger: {
+                    int parameter = rand() % 100;
+                    if (parameter <= 20) {
+                        player.health--;
+                    }
+                    break;
+                }
+                case relict: {
+                    board.board[player.getPosition().y][player.getPosition().x].fieldType = empty;
+                    player.setPlayerCollectedRelics();
+                    break;
+                }
+                case spring: {
+                    board.board[player.getPosition().y][player.getPosition().x].fieldType = empty;
+                    player.health++;
+                    break;
+                }
+
+            }
+            enemy.enemyMove();
+            // system("cls");
+            std::cout << "Level: " << level << std::endl;
+            board.printBoard(player.getPosition(), enemy.getPosition());
+            player.printPlayerStats();
+
+            if (player.getPosition().y == enemy.getPosition().y && player.getPosition().x == enemy.getPosition().x) {
+                std::cout << "The enemy got you! YOU LOSE!!" << std::endl;
+                return 0;
+            }
+
+            if (board.countRelics() == 0) {
+                std::cout << "All Relics Found! Next Level!!" << std::endl;
+                player.setDefaultPlayerPostion();
+                level++;
+                player.collectedRelics = 0;
+                break;
+            }
+
+            if (player.health == 0) {
+                std::cout << "All Lifes lost! YOU LOSE!!" << std::endl;
+                return 0;
+            }
         }
 
-        if(player.health == 0){
-            std::cout  << "All Lifes lost! YOU LOSE!!" << std::endl;
-        }
+
     }
-
-
-
-
-
 
 
 
