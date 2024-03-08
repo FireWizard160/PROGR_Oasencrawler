@@ -15,7 +15,7 @@ FieldType Field::createFieldType() {
     int relicFieldChance =  20+(level*3);
     int springFieldChance = 50-(level*3);
     int emptyFieldChance = 80-(level*3);
-    int itemFieldChance = 5;
+    int eventFieldChance = 5;
     int dangerFieldChance = 100;
 
     if(level >= 5){
@@ -29,17 +29,17 @@ FieldType Field::createFieldType() {
     if (level >= 15){
         relicFieldChance = 50;
         dangerFieldChance = 100;
-        itemFieldChance = 0;
+        eventFieldChance = 0;
     }
 
-    if(parameter < itemFieldChance){
-        return item;
+    if(parameter < eventFieldChance){
+        return event;
     }else if(parameter < relicFieldChance) {
         return relict;
     }else if(parameter < springFieldChance) {
         return spring;
     }else if(parameter < emptyFieldChance){
-            return empty;
+        return empty;
     } else if(parameter < dangerFieldChance){
         return danger;
     } else  {

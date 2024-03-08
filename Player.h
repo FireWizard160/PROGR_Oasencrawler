@@ -6,7 +6,7 @@
 #define OASENCRAWLER_PLAYER_H
 
 #include "Entity.h"
-
+#include "Event.h"
 
 
 class Player: public Entity{
@@ -18,7 +18,7 @@ class Player: public Entity{
     public:
         Player();
 
-
+        Event item[5];
         Vector getPlayerPosition();
 
         void inputHandler();

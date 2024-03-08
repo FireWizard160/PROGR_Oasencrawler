@@ -13,4 +13,6 @@ add_executable(Oasencrawler main.cpp
         Enemy.cpp
         Enemy.h
         Entity.cpp
-        Entity.h)
+        Entity.h
+        Event.cpp
+        Event.h)

@@ -66,7 +66,7 @@ void Board::printBoard(Vector playerPosition, Vector enemyPosition){
                     std::cout << "s";
                     break;
                 }
-                case item:{
+                case event:{
                     std::cout << "?";
                     break;
                 }

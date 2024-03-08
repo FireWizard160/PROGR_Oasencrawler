@@ -10,7 +10,7 @@ enum FieldType {
     danger ,
     relict ,
     spring ,
-    item,
+    event,
 
 };
 

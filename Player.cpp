@@ -6,10 +6,8 @@
 #include "Player.h"
 
 extern int level;
-Player::Player() {
 
-
-}
+Player::Player() = default;
 
 
 

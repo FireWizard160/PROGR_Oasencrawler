@@ -59,6 +59,12 @@ int main(){
                     break;
                 }
 
+                case event: {
+
+
+                    break;
+                }
+
             }
             enemy.enemyMove();
             // system("cls");
@@ -84,10 +90,5 @@ int main(){
                 return 0;
             }
         }
-
-
     }
-
-
-
 }

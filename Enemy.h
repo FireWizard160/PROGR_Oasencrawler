@@ -12,6 +12,9 @@ class Enemy : public Entity{
     public:
         Enemy();
         void enemyMove();
+
+    private:
+        int movementSpeed = 1;
 };
 
 
