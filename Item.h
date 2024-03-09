@@ -5,7 +5,7 @@
 #ifndef OASENCRAWLER_ITEM_H
 #define OASENCRAWLER_ITEM_H
 
-enum itemType {
+enum ItemType {
     teleport,
     healthPotion,
     bigHealthPotion,
@@ -16,9 +16,9 @@ enum itemType {
 class Item {
     public:
     Item();
-    itemType itemType;
-    enum itemType createItemType();
-    static void enumToString (enum itemType);
+    ItemType itemType;
+    void createItemType();
+    static void itemTypeToString (enum ItemType);
 
 
 };

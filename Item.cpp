@@ -9,11 +9,10 @@
 #include "Board.h"
 
 Item::Item() {
-
-
+createItemType();
 }
 
-itemType createItemType(){
+void Item::createItemType(){
 
 
     int parameter = rand() % 100;
@@ -30,30 +29,35 @@ itemType createItemType(){
 
     // Random Teleport
     if (parameter < teleportChance) {
-        return teleport;
+        itemType = teleport;
+        std::cout << "GOOD ITEM: Teleport (lets you Teleport to a Position)" << std::endl;
     }
         // Spring Replace To Death
     else if (parameter < healthPotionChance) {
-        return healthPotion;
+        itemType = healthPotion;
+        std::cout << "GOOD ITEM: Health Potion (restores 3 HP)" << std::endl;
     }
         // Empty Replace To Death
     else if (parameter < bigHealthPotionChance) {
-        return bigHealthPotion;
+        itemType = bigHealthPotion;
+        std::cout << "GOOD ITEM: Big Health Potion (restore 5 HP)" << std::endl;
     }
         // Enemy Walking Speed Increase
     else if (parameter < skipLevelChance) {
-        return skipLevel;
+        std::cout << "GOOD ITEM: Skip Level" << std::endl;
+        itemType = skipLevel;
     }
         // Increase Damage Chance
     else if (parameter < killEnemyChance) {
-        return killEnemy;
+        std::cout << "GOOD ITEM: Kill Enemy" << std::endl;
+        itemType = killEnemy;
     }
 
 
 
 }
 
- void Item::enumToString (enum itemType itemType){
+ void Item::itemTypeToString (enum ItemType itemType){
     switch (itemType) {
         case teleport:
             std::cout << "Teleport (lets you Teleport to a Position)" << std::endl;

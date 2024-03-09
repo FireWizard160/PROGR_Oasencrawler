@@ -9,7 +9,7 @@
 
 //todo validiern beim erstellen
 //todo startposition beim board constructor beachten
-void Board::createBoard(){
+void Board::createBoard() {
     for (int i = 0; i < 5; ++i) {
         for (int j = 0; j < 5; ++j) {
             //if startposition = empty field
@@ -17,10 +17,6 @@ void Board::createBoard(){
             //count relics
         }
     }
-
-    //validate board
-    //relic count == 0
-    // rand 0 - board size (xy) = relic nicht starposition
 }
 
 

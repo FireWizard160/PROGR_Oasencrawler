@@ -7,6 +7,8 @@
 
 #include "Entity.h"
 #include "Item.h"
+#include "Enemy.h"
+
 
 
 
@@ -19,11 +21,11 @@ class Player: public Entity{
     public:
         Player();
 
-        Item inventory[5];
+        Item inventory[5] = {};
         int totalItemsInInventory = 0;
         Vector getPlayerPosition();
 
-        void inputHandler();
+        void inputHandler(Enemy& enemy);
         void printPlayerStats();
         int getPlayerHealth();
         int getPlayerCollectedRelics();
@@ -32,7 +34,7 @@ class Player: public Entity{
         int collectedRelics = 0;
         int level = 1;
         void setDefaultPlayerPostion();
-        void useItem(itemType itemType, int userInput);;
+        void useItem(ItemType itemType, Enemy& enemy);
 
 
 

@@ -6,13 +6,18 @@
 #include "Player.h"
 #include <conio.h>
 #include "Item.h"
+#include "Enemy.h"
+
 
 extern int level;
+extern bool levelSkip;
 
-Player::Player() = default;
+Player::Player(){
+
+}
 
 
-void Player::inputHandler() {
+void Player::inputHandler(Enemy &enemy) {
     char userInput;
 
     std::cin >> userInput;
@@ -45,14 +50,21 @@ void Player::inputHandler() {
             for (i; i < totalItemsInInventory; ++i) {
 
                 std::cout << i + 1 << ": ";
-
-                Item::enumToString(inventory[i].itemType);
+                Item::itemTypeToString(inventory[i].itemType);
                 std::cout << std::endl;
             }
             int itemNumber;
             std::cin >> itemNumber;
+            if (itemNumber > totalItemsInInventory){
+                std::cout << "Invalid Option" << std::endl;
+            }
 
-            useItem(inventory[i].itemType, itemNumber);
+            useItem(inventory[itemNumber - 1].itemType, enemy);
+            totalItemsInInventory--;
+
+            for (int j = itemNumber - 1; j < totalItemsInInventory; ++j) {
+            inventory[j] = inventory[j+1];
+            }
 
             break;
 
@@ -91,19 +103,19 @@ void Player::setPlayerCollectedRelics() {
     collectedRelics++;
 }
 
-void Player::useItem(itemType itemType, int userInput) {
+void Player::useItem(ItemType itemType, Enemy &enemy) {
 
-    switch (userInput) {
+    switch (itemType) {
         case teleport:
             while (1) {
 
                 int x = 0;
                 int y = 0;
 
-                std::cout << "Enter Y coordinate:";
+                std::cout << "Enter X coordinate:";
                 std::cin >> x;
 
-                std::cout << "Enter X coordinate:";
+                std::cout << "Enter Y coordinate:";
                 std::cin >> y;
 
                 if (x > 4 || y > 4 || x < 0 || y < 0) {
@@ -124,19 +136,14 @@ void Player::useItem(itemType itemType, int userInput) {
 
             break;
         case skipLevel:
-            for (int i = 0; i < 5; ++i) {
-                for (int j = 0; j < 5; ++j) {
-
-                }
-            }
+            levelSkip = true;
 
             break;
         case killEnemy:
-
+            enemy.alive = false;
             break;
 
 
     }
-
 };
 

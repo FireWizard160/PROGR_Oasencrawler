@@ -3,8 +3,7 @@
 #include <iostream>
 
 #include "Field.h"
-#include "Player.h"
-#include "Board.h"
+
 
 extern int level;
 
@@ -15,7 +14,7 @@ FieldType Field::createFieldType() {
     int relicFieldChance =  20+(level*3);
     int springFieldChance = 50-(level*3);
     int emptyFieldChance = 80-(level*3);
-    int eventFieldChance = 5;
+    int eventFieldChance = 20;
     int dangerFieldChance = 100;
 
     if(level >= 5){

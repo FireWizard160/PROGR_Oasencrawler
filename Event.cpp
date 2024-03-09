@@ -10,6 +10,8 @@
 #include "Board.h"
 #include "Enemy.h"
 
+#define BOARDSIZE 5
+
 #define RANDOM_TELEPORT_CHANCE 25
 #define SPRING_REPLACE_TO_DEATH_CHANCE 50
 #define EMPTY_REPLACE_TO_DEATH_CHANCE 75
@@ -53,8 +55,8 @@ void Event::executeRandomTeleport(Player &player){
 
 void Event::executeSpringReplaceToDeath(Board &board){
 
-    for (int i = 0; i < 5; ++i) {
-        for (int j = 0; j < 5; ++j) {
+    for (int i = 0; i < BOARDSIZE; ++i) {
+        for (int j = 0; j < BOARDSIZE; ++j) {
             if(board.board[i][j].fieldType == spring){
                 board.board[i][j].fieldType = danger;
             }
@@ -64,8 +66,8 @@ void Event::executeSpringReplaceToDeath(Board &board){
 }
 
 void Event::executeEmptyReplaceToDeath(Board &board){
-    for (int i = 0; i < 5; ++i) {
-        for (int j = 0; j < 5; ++j) {
+    for (int i = 0; i < BOARDSIZE; ++i) {
+        for (int j = 0; j < BOARDSIZE; ++j) {
             if(board.board[i][j].fieldType == empty){
                 board.board[i][j].fieldType = danger;
             }
