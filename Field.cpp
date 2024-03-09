@@ -29,7 +29,7 @@ FieldType Field::createFieldType() {
     if (level >= 15){
         relicFieldChance = 50;
         dangerFieldChance = 100;
-        eventFieldChance = 0;
+        eventFieldChance = 3;
     }
 
     if(parameter < eventFieldChance){

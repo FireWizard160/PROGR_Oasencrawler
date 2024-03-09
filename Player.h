@@ -6,7 +6,8 @@
 #define OASENCRAWLER_PLAYER_H
 
 #include "Entity.h"
-#include "Event.h"
+#include "Item.h"
+
 
 
 class Player: public Entity{
@@ -18,7 +19,8 @@ class Player: public Entity{
     public:
         Player();
 
-        Event item[5];
+        Item inventory[5];
+        int totalItemsInInventory = 0;
         Vector getPlayerPosition();
 
         void inputHandler();
@@ -30,6 +32,7 @@ class Player: public Entity{
         int collectedRelics = 0;
         int level = 1;
         void setDefaultPlayerPostion();
+        void useItem(itemType itemType, int userInput);;
 
 
 

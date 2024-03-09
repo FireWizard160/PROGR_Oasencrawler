@@ -10,13 +10,16 @@
 #include "Field.h"
 #include "Enemy.h"
 #include "Entity.h"
+#include "Item.h"
+#include "Event.h"
 
 int level = 1;
+int enemyMovementSpeed = 1;
 
 int main(){
     Player player = Player();
     srand(static_cast<unsigned>(time(nullptr)));
-
+    int damageChance = 0;
     while (1) {
 
 
@@ -43,7 +46,7 @@ int main(){
                 }
                 case danger: {
                     int parameter = rand() % 100;
-                    if (parameter <= 20) {
+                    if (parameter <= damageChance) {
                         player.health--;
                     }
                     break;
@@ -56,18 +59,36 @@ int main(){
                 case spring: {
                     board.board[player.getPosition().y][player.getPosition().x].fieldType = empty;
                     player.health++;
+
                     break;
                 }
 
                 case event: {
+                    int parameter = rand() % 2;
 
 
+                    if (parameter){
+                        Event::Execute(player, board, enemy);
+                    } else {
+
+                        if (player.totalItemsInInventory + 1 < 5){
+                            player.inventory[player.totalItemsInInventory] = Item();
+                        } else {
+                            std::cout << "max items reached" << std::endl;
+                        }
+                    player.totalItemsInInventory++;
+                    }
+                    board.board[player.getPosition().y][player.getPosition().x].fieldType = empty;
                     break;
                 }
 
             }
-            enemy.enemyMove();
-            // system("cls");
+
+            for (int i = 0; i < enemyMovementSpeed; ++i) {
+                enemy.enemyMove();
+            }
+
+
             std::cout << "Level: " << level << std::endl;
             board.printBoard(player.getPosition(), enemy.getPosition());
             player.printPlayerStats();

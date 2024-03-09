@@ -3,68 +3,78 @@
 //
 
 #include <cstdlib>
+#include <iostream>
+
 #include "Event.h"
+#include "Player.h"
+#include "Board.h"
+#include "Enemy.h"
 
+#define RANDOM_TELEPORT_CHANCE 25
+#define SPRING_REPLACE_TO_DEATH_CHANCE 50
+#define EMPTY_REPLACE_TO_DEATH_CHANCE 75
+#define ENEMY_WALKING_SPEED_INCREASE_CHANCE 100
 
-eventType Event::createEventType() {
+extern int enemyMovementSpeed;
+
+void Event::Execute(Player& player, Board& board, Enemy& enemy) {
 
     int parameter = rand() % 100;
 
-    int teleportChance = 10;
-    int healthPotionChance = 20;
-    int randomTeleportChance = 30;
-    int springReplaceToDeathChance = 40;
-    int emptyReplaceToDeathChance = 50;
-    int enemyWalkingSpeedIncreaseChance = 60;
-    int skipLevelChance = 70;
-    int killEnemyChance = 80;
-    int increaseDamageChance = 90;
-    int bigHealthPotionChance = 100;
 
-    // Teleport
-    if (parameter < teleportChance) {
-        return teleport;
-    }
-        // Health Potion
-    else if (parameter < healthPotionChance) {
-        return healthPotion;
-    }
-        // Random Teleport
-    else if (parameter < randomTeleportChance) {
-        return randomTeleport;
+
+    // Random Teleport
+    if (parameter < RANDOM_TELEPORT_CHANCE) {
+        executeRandomTeleport(player);
     }
         // Spring Replace To Death
-    else if (parameter < springReplaceToDeathChance) {
-        return springReplaceToDeath;
+    else if (parameter < SPRING_REPLACE_TO_DEATH_CHANCE) {
+        executeSpringReplaceToDeath(board);
     }
         // Empty Replace To Death
-    else if (parameter < emptyReplaceToDeathChance) {
-        return  emptyReplaceToDeath;
+    else if (parameter < EMPTY_REPLACE_TO_DEATH_CHANCE) {
+        executeEmptyReplaceToDeath(board);
     }
         // Enemy Walking Speed Increase
-    else if (parameter < enemyWalkingSpeedIncreaseChance) {
-        return enemyWalkingSpeedIncrease;
+    else if (parameter < ENEMY_WALKING_SPEED_INCREASE_CHANCE) {
+        executeEnemyWalkingSpeedIncrease(enemy);
     }
-        // Skip Level
-    else if (parameter < skipLevelChance) {
-       return skipLevel;
-    }
-        // Kill Enemy
-    else if (parameter < killEnemyChance) {
-      return killEnemy;
-    }
-        // Increase Damage Chance
-    else if (parameter < increaseDamageChance) {
-       return increaseDamageFieldChance;
-    }
-        // Big Health Potion
-    else {
-       return bigHealthPotion;
-    }
+
 }
 
+void Event::executeRandomTeleport(Player &player){
 
+    int newX = rand() % 5;
+    int newY = rand() % 5;
 
-Event::Event() {
-    createEventType();
+    player.setPositon(newY,newX);
+    std::cout << "BAD: You got teleported random" << std::endl;
+}
+
+void Event::executeSpringReplaceToDeath(Board &board){
+
+    for (int i = 0; i < 5; ++i) {
+        for (int j = 0; j < 5; ++j) {
+            if(board.board[i][j].fieldType == spring){
+                board.board[i][j].fieldType = danger;
+            }
+        }
+    }
+    std::cout << "BAD: All Spring Fields were replaced with Danger Fields" << std::endl;
+}
+
+void Event::executeEmptyReplaceToDeath(Board &board){
+    for (int i = 0; i < 5; ++i) {
+        for (int j = 0; j < 5; ++j) {
+            if(board.board[i][j].fieldType == empty){
+                board.board[i][j].fieldType = danger;
+            }
+        }
+    }
+    std::cout << "BAD: All Empty Fields were replaced with Danger Fields" << std::endl;
+}
+
+void Event::executeEnemyWalkingSpeedIncrease(Enemy &enemy){
+    enemyMovementSpeed++;
+    std::cout << "BAD: The Enemy can now move faster" << std::endl;
 }

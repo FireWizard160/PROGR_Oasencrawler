@@ -18,6 +18,10 @@ struct Vector {
 };
 
 class Entity {
+public:
+    void setPositon(int y, int x);
+
+
 protected:
     Vector position;
     public:
@@ -25,6 +29,7 @@ protected:
     bool checkValidMove(Vector positon);
     Vector getPosition();
     bool Move(Vector direction);
+
 };
 
 

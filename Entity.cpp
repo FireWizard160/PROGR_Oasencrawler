@@ -32,3 +32,8 @@ bool Entity::Move(Vector direction) {
 Vector Entity::getPosition() {
     return position;
 }
+
+void Entity::setPositon(int y, int x) {
+    position.y = y;
+    position.x = x;
+}

@@ -5,28 +5,21 @@
 #ifndef OASENCRAWLER_EVENT_H
 #define OASENCRAWLER_EVENT_H
 
-enum eventType {
-    teleport,
-    healthPotion,
-    randomTeleport,
-    springReplaceToDeath,
-    emptyReplaceToDeath,
-    enemyWalkingSpeedIncrease,
-    skipLevel,
-    killEnemy,
-    increaseDamageFieldChance,
-    bigHealthPotion,
-};
+#include "Board.h"
+#include "Enemy.h"
 
 class Event {
-
-
     public:
-    Event();
-    eventType eventType;
-    enum eventType createEventType();
+    static void Execute(Player& player, Board& board, Enemy& enemy);
 
-    private:
+private:
+    static void executeRandomTeleport(Player &);
+
+    static void executeSpringReplaceToDeath(Board &);
+
+    static void executeEmptyReplaceToDeath(Board &);
+
+    static void executeEnemyWalkingSpeedIncrease(Enemy &);
 };
 
 
