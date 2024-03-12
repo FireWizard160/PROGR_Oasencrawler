@@ -21,7 +21,7 @@ class Player: public Entity{
     public:
         Player();
 
-        Item inventory[5] = {};
+        Item *inventory[5];
         int totalItemsInInventory = 0;
         Vector getPlayerPosition();
 
@@ -32,9 +32,9 @@ class Player: public Entity{
         int health = 5;
         void setPlayerCollectedRelics();
         int collectedRelics = 0;
-        int level = 1;
         void setDefaultPlayerPostion();
         void useItem(ItemType itemType, Enemy& enemy);
+        bool checkValidMove(Vector positon) override;
 
 
 

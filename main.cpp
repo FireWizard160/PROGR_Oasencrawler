@@ -5,20 +5,22 @@
 #include <ctime>
 #include <cstdlib>
 #include <iostream>
+#include <chrono>
+#include <unistd.h>
 #include "Board.h"
 #include "Player.h"
 #include "Enemy.h"
 #include "Item.h"
 #include "Event.h"
 #define BOARDSIZE 5
+
 int level = 1;
-int enemyMovementSpeed = 1;
 bool levelSkip = false;
 
 int main(){
     Player player = Player();
     srand(static_cast<unsigned>(time(nullptr)));
-    int damageChance = 0;
+    int damageChance = 20;
     while (1) {
 
 
@@ -30,6 +32,8 @@ int main(){
         board.ValidateBoard();
 
         std::cout << "Level: " << level << std::endl;
+        std::cout << "\n" << std::endl;
+
         board.printBoard(player.getPosition(), enemy.getPosition());
         player.printPlayerStats();
 
@@ -38,7 +42,7 @@ int main(){
 
 
             player.inputHandler(enemy);
-            system("cls");
+           // system("cls");
             switch (board.getCurrentFieldType(player)) {
                 case empty: {
                     break;
@@ -71,7 +75,7 @@ int main(){
                     } else {
 
                         if (player.totalItemsInInventory + 1 < 5){
-                            player.inventory[player.totalItemsInInventory] = Item();
+                            player.inventory[player.totalItemsInInventory] = new Item();
                         } else {
                             std::cout << "max items reached" << std::endl;
                         }
@@ -83,10 +87,9 @@ int main(){
 
             }
 
-            if (enemy.alive == true){
-                for (int i = 0; i < enemyMovementSpeed; ++i) {
+            if (enemy.alive){
                     enemy.enemyMove();
-                }
+
             } else {
                 board.board[enemy.getPosition().y][enemy.getPosition().x].fieldType = empty;
             }
@@ -99,6 +102,7 @@ int main(){
 
             if (player.getPosition().y == enemy.getPosition().y && player.getPosition().x == enemy.getPosition().x) {
                 std::cout << "The enemy got you! YOU LOSE!!" << std::endl;
+                sleep(5);
                 return 0;
             }
 
@@ -112,6 +116,7 @@ int main(){
             }
 
             if (player.health == 0) {
+                sleep(5);
                 std::cout << "All Lifes lost! YOU LOSE!!" << std::endl;
                 return 0;
             }

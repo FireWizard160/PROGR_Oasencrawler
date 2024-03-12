@@ -17,7 +17,7 @@
 #define EMPTY_REPLACE_TO_DEATH_CHANCE 75
 #define ENEMY_WALKING_SPEED_INCREASE_CHANCE 100
 
-extern int enemyMovementSpeed;
+
 
 void Event::Execute(Player& player, Board& board, Enemy& enemy) {
 
@@ -77,6 +77,6 @@ void Event::executeEmptyReplaceToDeath(Board &board){
 }
 
 void Event::executeEnemyWalkingSpeedIncrease(Enemy &enemy){
-    enemyMovementSpeed++;
+    enemy.movementSpeed++;
     std::cout << "BAD: The Enemy can now move faster" << std::endl;
 }

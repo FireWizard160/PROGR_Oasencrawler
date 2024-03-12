@@ -5,6 +5,7 @@
 #include <iostream>
 #include "Player.h"
 #include <conio.h>
+#include <list>
 #include "Item.h"
 #include "Enemy.h"
 
@@ -18,9 +19,9 @@ Player::Player(){
 
 
 void Player::inputHandler(Enemy &enemy) {
-    char userInput;
+    char userInput = getch();
 
-    std::cin >> userInput;
+
 
     switch (userInput) {
         case 'w':
@@ -50,21 +51,26 @@ void Player::inputHandler(Enemy &enemy) {
             for (i; i < totalItemsInInventory; ++i) {
 
                 std::cout << i + 1 << ": ";
-                Item::itemTypeToString(inventory[i].itemType);
+                Item::itemTypeToString(inventory[i]->itemType);
                 std::cout << std::endl;
             }
-            int itemNumber;
+            int itemNumber = 0;
+
             std::cin >> itemNumber;
+
             if (itemNumber > totalItemsInInventory){
                 std::cout << "Invalid Option" << std::endl;
             }
 
-            useItem(inventory[itemNumber - 1].itemType, enemy);
+            useItem(inventory[itemNumber - 1]->itemType, enemy);
             totalItemsInInventory--;
+
+            delete inventory[itemNumber - 1];
 
             for (int j = itemNumber - 1; j < totalItemsInInventory; ++j) {
             inventory[j] = inventory[j+1];
             }
+
 
             break;
 
@@ -145,5 +151,13 @@ void Player::useItem(ItemType itemType, Enemy &enemy) {
 
 
     }
+}
+
+bool Player::checkValidMove(Vector positon) {
+    if(!Entity::checkValidMove(positon)){
+        std::cout << "Invalid move!" << std::endl;
+        return false;
+    }
+    return true;
 };
 

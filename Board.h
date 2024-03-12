@@ -18,7 +18,7 @@ class Board {
         bool checkValidRelics();
         void ValidateBoard();
         FieldType getCurrentFieldType(Player);
-        int level = 1;
+
 
 };
 

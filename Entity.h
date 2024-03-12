@@ -10,11 +10,6 @@ struct Vector {
     int x = 0;
     int y = 0;
 
-     /*void operator+=(Vector vec) {
-        x += vec.x;
-        y += vec.y;
-    }*/
-
 };
 
 class Entity {
@@ -26,9 +21,9 @@ protected:
     Vector position;
     public:
     Entity() = default;
-    bool checkValidMove(Vector positon);
+    virtual bool checkValidMove(Vector positon);
     Vector getPosition();
-    bool Move(Vector direction);
+    void Move(Vector direction);
 
 };
 

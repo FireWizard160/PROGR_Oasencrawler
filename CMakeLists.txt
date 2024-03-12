@@ -18,5 +18,4 @@ add_executable(Oasencrawler main.cpp
         Event.h
         Item.cpp
         Item.h
-        Oasencrawler.cpp
-        Oasencrawler.h)
+)

@@ -15,18 +15,18 @@ bool Entity::checkValidMove(Vector position) {
     return true;
 }
 
-bool Entity::Move(Vector direction) {
+void Entity::Move(Vector direction) {
 
     Vector newPosition = Vector{position.x + direction.x, position.y + direction.y};
 
     if(!checkValidMove(newPosition)){
 
-        return false;
+        return;
     }
 
 
     position = newPosition;
-    return true;
+    return;
 }
 
 Vector Entity::getPosition() {
