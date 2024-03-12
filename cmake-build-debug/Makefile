@@ -152,6 +152,78 @@ Board.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Oasencrawler.dir\build.make CMakeFiles/Oasencrawler.dir/Board.cpp.s
 .PHONY : Board.cpp.s
 
+Enemy.obj: Enemy.cpp.obj
+.PHONY : Enemy.obj
+
+# target to build an object file
+Enemy.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Oasencrawler.dir\build.make CMakeFiles/Oasencrawler.dir/Enemy.cpp.obj
+.PHONY : Enemy.cpp.obj
+
+Enemy.i: Enemy.cpp.i
+.PHONY : Enemy.i
+
+# target to preprocess a source file
+Enemy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Oasencrawler.dir\build.make CMakeFiles/Oasencrawler.dir/Enemy.cpp.i
+.PHONY : Enemy.cpp.i
+
+Enemy.s: Enemy.cpp.s
+.PHONY : Enemy.s
+
+# target to generate assembly for a file
+Enemy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Oasencrawler.dir\build.make CMakeFiles/Oasencrawler.dir/Enemy.cpp.s
+.PHONY : Enemy.cpp.s
+
+Entity.obj: Entity.cpp.obj
+.PHONY : Entity.obj
+
+# target to build an object file
+Entity.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Oasencrawler.dir\build.make CMakeFiles/Oasencrawler.dir/Entity.cpp.obj
+.PHONY : Entity.cpp.obj
+
+Entity.i: Entity.cpp.i
+.PHONY : Entity.i
+
+# target to preprocess a source file
+Entity.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Oasencrawler.dir\build.make CMakeFiles/Oasencrawler.dir/Entity.cpp.i
+.PHONY : Entity.cpp.i
+
+Entity.s: Entity.cpp.s
+.PHONY : Entity.s
+
+# target to generate assembly for a file
+Entity.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Oasencrawler.dir\build.make CMakeFiles/Oasencrawler.dir/Entity.cpp.s
+.PHONY : Entity.cpp.s
+
+Event.obj: Event.cpp.obj
+.PHONY : Event.obj
+
+# target to build an object file
+Event.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Oasencrawler.dir\build.make CMakeFiles/Oasencrawler.dir/Event.cpp.obj
+.PHONY : Event.cpp.obj
+
+Event.i: Event.cpp.i
+.PHONY : Event.i
+
+# target to preprocess a source file
+Event.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Oasencrawler.dir\build.make CMakeFiles/Oasencrawler.dir/Event.cpp.i
+.PHONY : Event.cpp.i
+
+Event.s: Event.cpp.s
+.PHONY : Event.s
+
+# target to generate assembly for a file
+Event.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Oasencrawler.dir\build.make CMakeFiles/Oasencrawler.dir/Event.cpp.s
+.PHONY : Event.cpp.s
+
 Field.obj: Field.cpp.obj
 .PHONY : Field.obj
 
@@ -175,6 +247,54 @@ Field.s: Field.cpp.s
 Field.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Oasencrawler.dir\build.make CMakeFiles/Oasencrawler.dir/Field.cpp.s
 .PHONY : Field.cpp.s
+
+Item.obj: Item.cpp.obj
+.PHONY : Item.obj
+
+# target to build an object file
+Item.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Oasencrawler.dir\build.make CMakeFiles/Oasencrawler.dir/Item.cpp.obj
+.PHONY : Item.cpp.obj
+
+Item.i: Item.cpp.i
+.PHONY : Item.i
+
+# target to preprocess a source file
+Item.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Oasencrawler.dir\build.make CMakeFiles/Oasencrawler.dir/Item.cpp.i
+.PHONY : Item.cpp.i
+
+Item.s: Item.cpp.s
+.PHONY : Item.s
+
+# target to generate assembly for a file
+Item.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Oasencrawler.dir\build.make CMakeFiles/Oasencrawler.dir/Item.cpp.s
+.PHONY : Item.cpp.s
+
+Oasencrawler.obj: Oasencrawler.cpp.obj
+.PHONY : Oasencrawler.obj
+
+# target to build an object file
+Oasencrawler.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Oasencrawler.dir\build.make CMakeFiles/Oasencrawler.dir/Oasencrawler.cpp.obj
+.PHONY : Oasencrawler.cpp.obj
+
+Oasencrawler.i: Oasencrawler.cpp.i
+.PHONY : Oasencrawler.i
+
+# target to preprocess a source file
+Oasencrawler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Oasencrawler.dir\build.make CMakeFiles/Oasencrawler.dir/Oasencrawler.cpp.i
+.PHONY : Oasencrawler.cpp.i
+
+Oasencrawler.s: Oasencrawler.cpp.s
+.PHONY : Oasencrawler.s
+
+# target to generate assembly for a file
+Oasencrawler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Oasencrawler.dir\build.make CMakeFiles/Oasencrawler.dir/Oasencrawler.cpp.s
+.PHONY : Oasencrawler.cpp.s
 
 Player.obj: Player.cpp.obj
 .PHONY : Player.obj
@@ -236,9 +356,24 @@ help:
 	@echo ... Board.obj
 	@echo ... Board.i
 	@echo ... Board.s
+	@echo ... Enemy.obj
+	@echo ... Enemy.i
+	@echo ... Enemy.s
+	@echo ... Entity.obj
+	@echo ... Entity.i
+	@echo ... Entity.s
+	@echo ... Event.obj
+	@echo ... Event.i
+	@echo ... Event.s
 	@echo ... Field.obj
 	@echo ... Field.i
 	@echo ... Field.s
+	@echo ... Item.obj
+	@echo ... Item.i
+	@echo ... Item.s
+	@echo ... Oasencrawler.obj
+	@echo ... Oasencrawler.i
+	@echo ... Oasencrawler.s
 	@echo ... Player.obj
 	@echo ... Player.i
 	@echo ... Player.s

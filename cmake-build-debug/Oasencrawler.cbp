@@ -88,10 +88,40 @@
 		<Unit filename="D:/FH/SS24/PROGR/Oasencrawler/PROGR_Oasencrawler/Board.h">
 			<Option target="Oasencrawler"/>
 		</Unit>
+		<Unit filename="D:/FH/SS24/PROGR/Oasencrawler/PROGR_Oasencrawler/Enemy.cpp">
+			<Option target="Oasencrawler"/>
+		</Unit>
+		<Unit filename="D:/FH/SS24/PROGR/Oasencrawler/PROGR_Oasencrawler/Enemy.h">
+			<Option target="Oasencrawler"/>
+		</Unit>
+		<Unit filename="D:/FH/SS24/PROGR/Oasencrawler/PROGR_Oasencrawler/Entity.cpp">
+			<Option target="Oasencrawler"/>
+		</Unit>
+		<Unit filename="D:/FH/SS24/PROGR/Oasencrawler/PROGR_Oasencrawler/Entity.h">
+			<Option target="Oasencrawler"/>
+		</Unit>
+		<Unit filename="D:/FH/SS24/PROGR/Oasencrawler/PROGR_Oasencrawler/Event.cpp">
+			<Option target="Oasencrawler"/>
+		</Unit>
+		<Unit filename="D:/FH/SS24/PROGR/Oasencrawler/PROGR_Oasencrawler/Event.h">
+			<Option target="Oasencrawler"/>
+		</Unit>
 		<Unit filename="D:/FH/SS24/PROGR/Oasencrawler/PROGR_Oasencrawler/Field.cpp">
 			<Option target="Oasencrawler"/>
 		</Unit>
 		<Unit filename="D:/FH/SS24/PROGR/Oasencrawler/PROGR_Oasencrawler/Field.h">
+			<Option target="Oasencrawler"/>
+		</Unit>
+		<Unit filename="D:/FH/SS24/PROGR/Oasencrawler/PROGR_Oasencrawler/Item.cpp">
+			<Option target="Oasencrawler"/>
+		</Unit>
+		<Unit filename="D:/FH/SS24/PROGR/Oasencrawler/PROGR_Oasencrawler/Item.h">
+			<Option target="Oasencrawler"/>
+		</Unit>
+		<Unit filename="D:/FH/SS24/PROGR/Oasencrawler/PROGR_Oasencrawler/Oasencrawler.cpp">
+			<Option target="Oasencrawler"/>
+		</Unit>
+		<Unit filename="D:/FH/SS24/PROGR/Oasencrawler/PROGR_Oasencrawler/Oasencrawler.h">
 			<Option target="Oasencrawler"/>
 		</Unit>
 		<Unit filename="D:/FH/SS24/PROGR/Oasencrawler/PROGR_Oasencrawler/Player.cpp">

@@ -38,7 +38,7 @@ int main(){
 
 
             player.inputHandler(enemy);
-
+            system("cls");
             switch (board.getCurrentFieldType(player)) {
                 case empty: {
                     break;
