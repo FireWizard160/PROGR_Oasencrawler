@@ -21,6 +21,7 @@ int main(){
     Player player = Player();
     srand(static_cast<unsigned>(time(nullptr)));
     int damageChance = 20;
+
     while (1) {
 
 
@@ -67,14 +68,14 @@ int main(){
                 }
 
                 case event: {
-                    int parameter = rand() % 2;
+                    int parameter = rand() % 100;
 
 
-                    if (parameter){
+                    if (parameter < 50){
                         Event::Execute(player, board, enemy);
                     } else {
 
-                        if (player.totalItemsInInventory + 1 < 5){
+                        if (player.totalItemsInInventory < 5){
                             player.inventory[player.totalItemsInInventory] = new Item();
                         } else {
                             std::cout << "max items reached" << std::endl;
@@ -88,7 +89,10 @@ int main(){
             }
 
             if (enemy.alive){
+                for (int i = 0; i < enemy.movementSpeed; ++i) {
                     enemy.enemyMove();
+                }
+
 
             } else {
                 board.board[enemy.getPosition().y][enemy.getPosition().x].fieldType = empty;

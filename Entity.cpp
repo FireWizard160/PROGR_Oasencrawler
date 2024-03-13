@@ -20,7 +20,6 @@ void Entity::Move(Vector direction) {
     Vector newPosition = Vector{position.x + direction.x, position.y + direction.y};
 
     if(!checkValidMove(newPosition)){
-
         return;
     }
 

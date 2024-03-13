@@ -272,30 +272,6 @@ Item.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Oasencrawler.dir\build.make CMakeFiles/Oasencrawler.dir/Item.cpp.s
 .PHONY : Item.cpp.s
 
-Oasencrawler.obj: Oasencrawler.cpp.obj
-.PHONY : Oasencrawler.obj
-
-# target to build an object file
-Oasencrawler.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Oasencrawler.dir\build.make CMakeFiles/Oasencrawler.dir/Oasencrawler.cpp.obj
-.PHONY : Oasencrawler.cpp.obj
-
-Oasencrawler.i: Oasencrawler.cpp.i
-.PHONY : Oasencrawler.i
-
-# target to preprocess a source file
-Oasencrawler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Oasencrawler.dir\build.make CMakeFiles/Oasencrawler.dir/Oasencrawler.cpp.i
-.PHONY : Oasencrawler.cpp.i
-
-Oasencrawler.s: Oasencrawler.cpp.s
-.PHONY : Oasencrawler.s
-
-# target to generate assembly for a file
-Oasencrawler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Oasencrawler.dir\build.make CMakeFiles/Oasencrawler.dir/Oasencrawler.cpp.s
-.PHONY : Oasencrawler.cpp.s
-
 Player.obj: Player.cpp.obj
 .PHONY : Player.obj
 
@@ -371,9 +347,6 @@ help:
 	@echo ... Item.obj
 	@echo ... Item.i
 	@echo ... Item.s
-	@echo ... Oasencrawler.obj
-	@echo ... Oasencrawler.i
-	@echo ... Oasencrawler.s
 	@echo ... Player.obj
 	@echo ... Player.i
 	@echo ... Player.s

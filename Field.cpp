@@ -14,7 +14,7 @@ FieldType Field::createFieldType() {
     int relicFieldChance =  20+(level*3);
     int springFieldChance = 50-(level*3);
     int emptyFieldChance = 80-(level*3);
-    int eventFieldChance = 20;
+    int eventFieldChance = 5;
     int dangerFieldChance = 100;
 
     if(level >= 5){

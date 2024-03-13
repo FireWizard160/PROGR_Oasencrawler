@@ -118,12 +118,6 @@
 		<Unit filename="D:/FH/SS24/PROGR/Oasencrawler/PROGR_Oasencrawler/Item.h">
 			<Option target="Oasencrawler"/>
 		</Unit>
-		<Unit filename="D:/FH/SS24/PROGR/Oasencrawler/PROGR_Oasencrawler/Oasencrawler.cpp">
-			<Option target="Oasencrawler"/>
-		</Unit>
-		<Unit filename="D:/FH/SS24/PROGR/Oasencrawler/PROGR_Oasencrawler/Oasencrawler.h">
-			<Option target="Oasencrawler"/>
-		</Unit>
 		<Unit filename="D:/FH/SS24/PROGR/Oasencrawler/PROGR_Oasencrawler/Player.cpp">
 			<Option target="Oasencrawler"/>
 		</Unit>

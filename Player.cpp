@@ -60,6 +60,7 @@ void Player::inputHandler(Enemy &enemy) {
 
             if (itemNumber > totalItemsInInventory){
                 std::cout << "Invalid Option" << std::endl;
+                break;
             }
 
             useItem(inventory[itemNumber - 1]->itemType, enemy);

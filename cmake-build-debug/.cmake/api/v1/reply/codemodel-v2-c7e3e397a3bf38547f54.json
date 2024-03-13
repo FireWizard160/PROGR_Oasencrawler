@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/FH/SS24/PROGR/PROGR_Oasencrawler/cmake-build-debug",
-		"source" : "C:/FH/SS24/PROGR/PROGR_Oasencrawler"
+		"build" : "D:/FH/SS24/PROGR/Oasencrawler/PROGR_Oasencrawler/cmake-build-debug",
+		"source" : "D:/FH/SS24/PROGR/Oasencrawler/PROGR_Oasencrawler"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 6
+		"minor" : 5
 	}
 }
